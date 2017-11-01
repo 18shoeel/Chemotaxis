@@ -1,10 +1,21 @@
+int x = 150;
+int y = 150;
+void setup()
 {
-  background(0);
-  ellipse(x,y,40,40);
+
+  size(600,600);
+  fill(100, 245, 220);
+}
+void draw()
+{
+  background(255-x/2,255-y/2,200);
+  
+  ellipse(x,y,20+x/10,20+x/10);
+  
 
 
-  x = x + (int)(Math.random()*20) - 9;
-    y = y + (int)(Math.random()*20) - 9;
+ x = x + (int)(Math.random()*11) - 5;
+   y = y + (int)(Math.random()*11) -5;
   
 if (x > 600) {
   x=200;
@@ -18,14 +29,14 @@ if (y > 600) {
     for (int x= 0; x<width; x= x + 200) {
       
        if (x < mouseX) {   
-                  x = x + (int)(Math.random() * 3) - 6;  
+                  x = x + 15;  
                 } else {  
-                  x = x + (int)(Math.random() * 1) + 5; 
+                  x = x -15; 
                 }
                  if (y < mouseY) {   
-                  y = y + (int)(Math.random() * 3) - 6;  
+                  y = y + 20;  
                 } else {  
-                  y = y + (int)(Math.random() * 1) + 5; 
+                  y = y- 20; 
                 }
 }
   }
